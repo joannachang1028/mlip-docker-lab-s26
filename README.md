@@ -1,4 +1,4 @@
-# Lab: Containerizing ML Models with Docker
+# Lab 5: Containerizing ML Models with Docker
 
 ## Overview
 In this lab, you will containerize a machine learning training pipeline and inference server using Docker. You will train a Wine classifier, serve it via Flask, and orchestrate both containers with Docker Compose. A key focus of this lab is **Docker volume management** — you will use both named volumes and bind mounts to share data between containers and persist artifacts on the host.
