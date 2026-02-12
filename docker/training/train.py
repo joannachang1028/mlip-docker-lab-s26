@@ -13,8 +13,8 @@ X, y = wine.data, wine.target
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # TODO: Create a RandomForestClassifier and train it on the training data
-clf = ...
-clf.fit(...)
+clf = RandomForestClassifier(random_state=42)
+clf.fit(X_train, y_train)
 
 # Evaluate on test set
 y_pred = clf.predict(X_test)
@@ -24,6 +24,6 @@ print(f"Training complete. Test accuracy: {accuracy_score(y_test, y_pred):.4f}")
 model_dir = "/app/models"
 os.makedirs(model_dir, exist_ok=True)
 
-joblib.dump(...)
+joblib.dump(clf, os.path.join(model_dir, "wine_model.pkl"))
 
 print("Model saved to /app/models/wine_model.pkl")

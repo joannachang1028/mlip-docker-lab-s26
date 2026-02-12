@@ -15,4 +15,4 @@ COPY docker/training/train.py ./train.py
 VOLUME ["/app/models"]
 
 # TODO: Set the command to run the training script
-CMD []
+CMD ["python", "train.py"]
